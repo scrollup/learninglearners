@@ -21,13 +21,12 @@ body {
     padding: 20px;
 }
 
-.general-flex{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 10px; /* Add gap between items */
+.general-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
 }
+
 header {
     background: rgb(67,187,200);
     background: linear-gradient(183deg, rgba(67,187,200,1) 77%, rgba(36,141,171,1) 100%);
@@ -184,18 +183,18 @@ nav ul li a {
 }
 
 #services .service {
-    margin: 20px 0;
-    flex: 1 1 45%;
     box-sizing: border-box;
     padding: 0 20px 0 0;
-    max-width: calc(50%);
 }
 
 @media (max-width: 768px) {
     #services .service {
-        flex: 1 1 100%; /* Full width for smaller screens */
         margin: 10px 0;
         max-width: 100%; /* Ensure max-width is 100% on small screens */
+    }
+
+    .general-grid {
+        grid-template-columns: 1fr;
     }
 }
 footer {
