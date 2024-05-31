@@ -12,13 +12,21 @@ body {
     overflow: hidden;
     padding: 20px;
     position: relative;
-    height: 270px;
+    height: 170px;
+}
+
+.services-section{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .general-flex{
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: baseline;
     justify-content: space-between;
+    gap: 10px; /* Add gap between items */
 }
 header {
     background: rgb(67,187,200);
@@ -55,7 +63,7 @@ header #branding h1 {
 #branding img {
     position: relative;
     z-index: 2;
-    padding: 100px;
+    padding: 0 100px;
 }
 
 nav ul {
@@ -80,7 +88,7 @@ nav ul li a {
     background-color: #fff;
     border-radius: 50%;
     position: absolute;
-    top: -230px;
+    top: -300px;
     left: 2%;
     z-index: 1;
 }
@@ -134,13 +142,61 @@ nav ul li a {
 #showcase p {
     font-size: 20px;
 }
+
+#showcase .container{
+    height: 450px;
+}
+
+.contact-us-btn{
+    padding: 20px 40px;
+    border-radius: 30px;
+    background: #aecd60;
+    border: 0;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: white;
+    box-shadow: -3px 4px 10px 0px #195f67;
+}
 #about, #services, #contact {
     padding: 20px;
 }
+
+.red-brand{
+    color: #EF7E71;
+}
+
+.large{
+    font-size: 2em;
+}
+
+.m-0{
+    margin: 0;
+}
+
+#services {
+    padding: 50px;
+    border-radius: 40px;
+    margin-top: -40px;
+    background: white;
+    box-shadow: -5px 4px 15px 2px #00000070;
+    position: relative;
+    z-index: 4; /* Prevent items from spanning both columns */
+}
+
 #services .service {
-    border: 1px solid #e1e1e1;
-    padding: 20px;
     margin: 20px 0;
+    flex: 1 1 45%;
+    box-sizing: border-box;
+    padding: 0 20px 0 0;
+    max-width: calc(50%);
+}
+
+@media (max-width: 768px) {
+    #services .service {
+        flex: 1 1 100%; /* Full width for smaller screens */
+        margin: 10px 0;
+        max-width: 100%; /* Ensure max-width is 100% on small screens */
+    }
 }
 footer {
     background: #333;
