@@ -144,7 +144,7 @@ nav ul li a {
     z-index: 6;
 }
 .showcase-text {
-    width: 460px;
+    max-width: 460px;
 }
 #showcase h1 {
     font-size: 55px;
@@ -227,11 +227,35 @@ nav ul li a {
     nav, .call-us{
         display: none;
     }
-    
+
     #showcase .container {
         height: 530px;
     }
 }
+
+@media (max-width: 500px) {
+    header #branding{
+        float: none;
+    }
+
+    .logo-circle{
+        left: -10%;
+    }
+
+    #branding img{
+        padding: 0;
+    }
+    
+    .girl-img img {
+        width: 180px;
+        top: -220px;
+    }
+
+    #showcase .container {
+        height: 580px;
+    }
+}
+
 footer {
     background: #333;
     color: #fff;
