@@ -15,6 +15,10 @@ body {
     height: 170px;
 }
 
+.no-height{
+    height: auto;
+}
+
 .services-section{
     max-width: 1200px;
     margin: 0 auto;
@@ -65,6 +69,11 @@ header #branding h1 {
     padding: 0 100px;
 }
 
+nav {
+    position: relative;
+    z-index: 5;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -93,6 +102,7 @@ nav ul li a {
 }
 
 .call-us {
+    position: relative;
     float: right;
     background-image: url(images/call_us.png);
     width: 272px;
@@ -130,6 +140,8 @@ nav ul li a {
     min-height: 400px;
     color: #fff;
     text-align: left;
+    position: relative;
+    z-index: 6;
 }
 .showcase-text {
     width: 460px;
@@ -156,8 +168,12 @@ nav ul li a {
     color: white;
     box-shadow: -3px 4px 10px 0px #195f67;
 }
-#about, #services, #contact {
+#services, #contact {
     padding: 20px;
+}
+
+#contact{
+    text-align: center;
 }
 
 .red-brand{
@@ -177,7 +193,7 @@ nav ul li a {
     border-radius: 40px;
     margin-top: -40px;
     background: white;
-    box-shadow: -5px 4px 15px 2px #00000070;
+    box-shadow: 0px 6px 50px 0px #195f673b;;
     position: relative;
     z-index: 4; /* Prevent items from spanning both columns */
 }
@@ -185,6 +201,12 @@ nav ul li a {
 #services .service {
     box-sizing: border-box;
     padding: 0 20px 0 0;
+}
+
+.about-section{
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-column-gap: 50px;
 }
 
 @media (max-width: 768px) {
@@ -195,6 +217,19 @@ nav ul li a {
 
     .general-grid {
         grid-template-columns: 1fr;
+    }
+
+    .girl-img img{
+            width: 370px;
+            top: -450px;
+    }
+
+    nav, .call-us{
+        display: none;
+    }
+    
+    #showcase .container {
+        height: 530px;
     }
 }
 footer {
